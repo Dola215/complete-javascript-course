@@ -245,3 +245,52 @@ function b() {
    }
 }
 */
+// Coding Challenge #1
+const MarkMass = 95;
+const MarkHeight = 1.88;
+const JohnMass = 85;
+const JohnHeight = 1.76;
+
+function calcuateBMT(height, mass) {
+  return mass / height ** 2;
+}
+
+const markBMI = calcuateBMT(MarkHeight, MarkMass);
+const jhonBMI = calcuateBMT(JohnHeight, JohnMass);
+
+// Coding Challenge #2
+
+if (markBMI > jhonBMI) {
+  console.log(`Mark's BMI ${markBMI} is higher than John's ${jhonBMI}!`);
+} else {
+  console.log(`John's BMI ${jhonBMI} is higher than Mark's ${markBMI}!`);
+}
+
+// Coding Challenge #3
+const Dolphins = [96, 108, 89];
+const Koalas = [88, 91, 110];
+
+function getAvarage(scores) {
+  const avarage = scores.reduce((prev, curren) => prev + curren, 0);
+  return avarage / scores.length;
+}
+if ((getAvarage(Dolphins) || getAvarage(Koalas)) >= 100) {
+  if (getAvarage(Dolphins) > getAvarage(Koalas)) {
+    console.log(`Dolphins win the trophy`);
+  } else {
+    console.log(`Koalas win the trophy`);
+  }
+} else {
+  console.log("No one wins the trophy");
+}
+console.log(getAvarage(Dolphins));
+console.log(getAvarage(Koalas));
+
+// Coding Challenge #4
+let price = 430;
+let tip = price >= 50 && price <= 300 ? 0.15 : 0.2;
+
+console.log(`The bill was ${price}, the tip was ${
+  price * tip
+}, and the total value
+${price + price * tip}`);
